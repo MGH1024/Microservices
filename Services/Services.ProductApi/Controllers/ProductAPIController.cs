@@ -23,6 +23,7 @@ namespace Services.ProductApi.Controllers
             {
                 IEnumerable<ProductDto> productDtos = await _productRepository.GetProducts();
                 _response.Result = productDtos;
+                _response.IsSuccess = true;
             }
             catch(Exception ex)
             {
